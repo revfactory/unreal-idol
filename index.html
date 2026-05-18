@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>〈언리얼 아이돌〉 — 슬라이드</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body {
+    height: 100%;
+    background: #0a0a0a;
+    color: #e8e8e8;
+    font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Apple SD Gothic Neo", sans-serif;
+    overflow: hidden;
+  }
+  .stage {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+  .slide {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+  }
+  .slide.active {
+    opacity: 1;
+    pointer-events: auto;
+  }
+  .slide img {
+    max-width: 96vw;
+    max-height: 92vh;
+    object-fit: contain;
+    box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+    user-select: none;
+    -webkit-user-drag: none;
+  }
+  .hud {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 10px 18px;
+    background: rgba(20, 20, 20, 0.78);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    z-index: 10;
+    font-size: 13px;
+    letter-spacing: 0.02em;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+  }
+  .hud:hover { opacity: 1; }
+  .hud button {
+    background: transparent;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: background 0.15s;
+  }
+  .hud button:hover { background: rgba(255, 255, 255, 0.1); }
+  .hud button:disabled { opacity: 0.3; cursor: default; }
+  .counter {
+    font-variant-numeric: tabular-nums;
+    color: #b8b8b8;
+    min-width: 56px;
+    text-align: center;
+  }
+  .counter strong { color: #ffe066; font-weight: 600; }
+  .title {
+    position: fixed;
+    top: 24px;
+    left: 32px;
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 0.04em;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.6;
+  }
+  .help {
+    position: fixed;
+    top: 56px;
+    right: 32px;
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 0.04em;
+    z-index: 10;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  .github-link {
+    position: fixed;
+    top: 22px;
+    right: 32px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    font-size: 12px;
+    color: #b8b8b8;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    background: rgba(20, 20, 20, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    z-index: 11;
+    opacity: 0.72;
+    transition: opacity 0.2s, color 0.2s, border-color 0.2s;
+  }
+  .github-link:hover {
+    opacity: 1;
+    color: #ffe066;
+    border-color: rgba(255, 224, 102, 0.4);
+  }
+  .github-link svg {
+    width: 16px;
+    height: 16px;
+    fill: currentColor;
+  }
+  .progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #ffe066, #ffcc33);
+    z-index: 20;
+    transition: width 0.3s ease;
+  }
+  @media (max-width: 640px) {
+    .title, .help { display: none; }
+  }
+</style>
+</head>
+<body>
+  <div class="progress" id="progress"></div>
+  <div class="title">〈언리얼 아이돌〉 · Unreal Idol</div>
+  <a class="github-link" href="https://github.com/revfactory/unreal-idol" target="_blank" rel="noopener noreferrer" aria-label="GitHub 저장소">
+    <svg viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
+    <span>GitHub</span>
+  </a>
+  <div class="help">← → · Space · F (Fullscreen) · Home/End</div>
+
+  <div class="stage" id="stage">
+    <div class="slide"><img src="slides/slide_01.png" alt="Slide 1" loading="eager"></div>
+    <div class="slide"><img src="slides/slide_02.png" alt="Slide 2"></div>
+    <div class="slide"><img src="slides/slide_03.png" alt="Slide 3"></div>
+    <div class="slide"><img src="slides/slide_04.png" alt="Slide 4"></div>
+    <div class="slide"><img src="slides/slide_05.png" alt="Slide 5"></div>
+    <div class="slide"><img src="slides/slide_06.png" alt="Slide 6"></div>
+    <div class="slide"><img src="slides/slide_07.png" alt="Slide 7"></div>
+    <div class="slide"><img src="slides/slide_08.png" alt="Slide 8"></div>
+    <div class="slide"><img src="slides/slide_09.png" alt="Slide 9"></div>
+    <div class="slide"><img src="slides/slide_10.png" alt="Slide 10"></div>
+  </div>
+
+  <div class="hud">
+    <button id="prev" aria-label="이전 슬라이드">◀</button>
+    <span class="counter"><strong id="current">1</strong> / <span id="total">10</span></span>
+    <button id="next" aria-label="다음 슬라이드">▶</button>
+    <button id="fs" aria-label="전체 화면">⛶</button>
+  </div>
+
+  <script>
+    const slides = document.querySelectorAll('.slide');
+    const total = slides.length;
+    const $current = document.getElementById('current');
+    const $total = document.getElementById('total');
+    const $prev = document.getElementById('prev');
+    const $next = document.getElementById('next');
+    const $fs = document.getElementById('fs');
+    const $progress = document.getElementById('progress');
+    const $stage = document.getElementById('stage');
+
+    $total.textContent = total;
+    let index = 0;
+
+    function go(i) {
+      index = Math.max(0, Math.min(total - 1, i));
+      slides.forEach((el, n) => el.classList.toggle('active', n === index));
+      $current.textContent = index + 1;
+      $progress.style.width = ((index + 1) / total * 100) + '%';
+      $prev.disabled = index === 0;
+      $next.disabled = index === total - 1;
+      const u = new URL(location.href);
+      u.hash = '#' + (index + 1);
+      history.replaceState(null, '', u);
+    }
+
+    function next() { if (index < total - 1) go(index + 1); }
+    function prev() { if (index > 0) go(index - 1); }
+
+    $prev.addEventListener('click', e => { e.stopPropagation(); prev(); });
+    $next.addEventListener('click', e => { e.stopPropagation(); next(); });
+    $fs.addEventListener('click', e => {
+      e.stopPropagation();
+      if (document.fullscreenElement) document.exitFullscreen();
+      else document.documentElement.requestFullscreen();
+    });
+
+    $stage.addEventListener('click', e => {
+      const x = e.clientX / window.innerWidth;
+      if (x < 0.4) prev();
+      else if (x > 0.6) next();
+    });
+
+    document.addEventListener('keydown', e => {
+      switch (e.key) {
+        case 'ArrowRight':
+        case ' ':
+        case 'PageDown':
+          e.preventDefault(); next(); break;
+        case 'ArrowLeft':
+        case 'PageUp':
+          e.preventDefault(); prev(); break;
+        case 'Home':
+          e.preventDefault(); go(0); break;
+        case 'End':
+          e.preventDefault(); go(total - 1); break;
+        case 'f':
+        case 'F':
+          e.preventDefault();
+          if (document.fullscreenElement) document.exitFullscreen();
+          else document.documentElement.requestFullscreen();
+          break;
+      }
+    });
+
+    // Touch swipe
+    let touchStartX = null;
+    document.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+    document.addEventListener('touchend', e => {
+      if (touchStartX === null) return;
+      const dx = e.changedTouches[0].clientX - touchStartX;
+      if (Math.abs(dx) > 50) { dx < 0 ? next() : prev(); }
+      touchStartX = null;
+    }, { passive: true });
+
+    // Initial — read hash
+    const initialHash = parseInt(location.hash.replace('#', ''), 10);
+    go(isNaN(initialHash) ? 0 : initialHash - 1);
+  </script>
+</body>
+</html>
