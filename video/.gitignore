@@ -1,0 +1,8 @@
+node_modules/
+.codex-imagegen-logs/
+public/img/.codex-imagegen-logs/
+out/stills/
+out/review/
+out/*_raw.mp4
+public/audio/retake/
+scripts/*.log

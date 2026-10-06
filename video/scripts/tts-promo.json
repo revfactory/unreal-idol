@@ -1,0 +1,20 @@
+{
+  "voice": "ibCGc01503OQd2R6i1n1",
+  "model": "eleven_v4",
+  "settings": {"stability": 0.5, "similarity_boost": 0.8, "use_speaker_boost": true},
+  "lines": [
+    {"id": "A01", "text": "데뷔 두 달 전."},
+    {"id": "A02", "text": "한 소녀가 사라졌다."},
+    {"id": "A03", "text": "그 아이의 목소리는,"},
+    {"id": "A04", "text": "아직, 서버에 남아 있었다."},
+    {"id": "A05", "text": "그 아이를, 다시 무대에 세운다."},
+    {"id": "A06", "text": "여덟 번째 멤버, 뉴."},
+    {"id": "A07", "text": "전 세계가 열광했다."},
+    {"id": "A08", "text": "하지만 뉴가 배운 건, 노래만이 아니었다."},
+    {"id": "A09", "text": "끝내 보내지 못한 메시지까지."},
+    {"id": "A10", "text": "친구인가. 환상인가."},
+    {"id": "A11", "text": "아니면, 우리 자신인가."},
+    {"id": "A12", "text": "언리얼 아이돌."},
+    {"id": "NEU1", "text": "[whispers] ……가자.", "voice": "uyVNoMrnUku1dZyVEXwD"}
+  ]
+}

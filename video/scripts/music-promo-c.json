@@ -1,0 +1,71 @@
+{
+ "positive_global_styles": [
+  "cinematic trailer score",
+  "dark hybrid orchestral and synth",
+  "high production value",
+  "instrumental",
+  "dark",
+  "epic"
+ ],
+ "negative_global_styles": [
+  "vocals",
+  "lyrics",
+  "singing",
+  "rap",
+  "lo-fi",
+  "acoustic guitar",
+  "comedy",
+  "happy",
+  "bright pop"
+ ],
+ "sections": [
+  {
+   "section_name": "Dark Turn",
+   "positive_local_styles": [
+    "dark suspense",
+    "deep brass braams",
+    "ticking clock percussion",
+    "distorted bass pulses",
+    "haunting minor piano motif",
+    "building dread"
+   ],
+   "negative_local_styles": [
+    "happy",
+    "dance beat"
+   ],
+   "duration_ms": 12000,
+   "lines": []
+  },
+  {
+   "section_name": "Climax",
+   "positive_local_styles": [
+    "epic hybrid orchestral climax",
+    "pounding taiko drums",
+    "soaring full strings",
+    "wordless choir pad",
+    "massive impacts",
+    "emotional peak"
+   ],
+   "negative_local_styles": [
+    "quiet",
+    "minimal"
+   ],
+   "duration_ms": 8000,
+   "lines": []
+  },
+  {
+   "section_name": "Title",
+   "positive_local_styles": [
+    "one colossal final boom hit",
+    "long reverb tail",
+    "lone piano note echoing into silence"
+   ],
+   "negative_local_styles": [
+    "drums continuing",
+    "melody"
+   ],
+   "duration_ms": 5000,
+   "lines": []
+  }
+ ]
+}

@@ -1,0 +1,72 @@
+{
+ "positive_global_styles": [
+  "cinematic trailer score",
+  "dark hybrid orchestral and synth",
+  "high production value",
+  "instrumental",
+  "mysterious",
+  "emotional"
+ ],
+ "negative_global_styles": [
+  "vocals",
+  "lyrics",
+  "singing",
+  "rap",
+  "lo-fi",
+  "acoustic guitar",
+  "comedy",
+  "happy",
+  "dance beat"
+ ],
+ "sections": [
+  {
+   "section_name": "Cold Open",
+   "positive_local_styles": [
+    "dark ambient drone",
+    "distant rain texture",
+    "sparse lonely felt piano notes in minor key",
+    "deep sub rumble",
+    "haunting stillness"
+   ],
+   "negative_local_styles": [
+    "drums",
+    "beat",
+    "loud hits"
+   ],
+   "duration_ms": 8000,
+   "lines": []
+  },
+  {
+   "section_name": "Data Awakening",
+   "positive_local_styles": [
+    "pulsing digital arpeggio synth",
+    "glitchy data textures",
+    "soft heartbeat kick",
+    "slowly rising strings",
+    "eerie and beautiful"
+   ],
+   "negative_local_styles": [
+    "full drums",
+    "drop"
+   ],
+   "duration_ms": 7000,
+   "lines": []
+  },
+  {
+   "section_name": "Decision Build",
+   "positive_local_styles": [
+    "huge cinematic riser",
+    "accelerating snare roll",
+    "string crescendo",
+    "tension peaking to maximum"
+   ],
+   "negative_local_styles": [
+    "calm",
+    "quiet",
+    "resolution"
+   ],
+   "duration_ms": 5000,
+   "lines": []
+  }
+ ]
+}
