@@ -1,0 +1,13 @@
+{
+  "positive_global_styles": ["modern cinematic electronic", "tech keynote energy", "motion graphics showreel", "precise and inventive", "instrumental", "high production value"],
+  "negative_global_styles": ["vocals", "lyrics", "singing", "rap", "lo-fi", "acoustic guitar", "orchestral waltz", "country"],
+  "sections": [
+    {"section_name": "Prompt", "positive_local_styles": ["minimal ticking electronic pulse", "soft warm synth pad", "sparse", "anticipation", "clean"], "negative_local_styles": ["drums", "bass drop"], "duration_ms": 6000, "lines": []},
+    {"section_name": "Ignition", "positive_local_styles": ["bright synth arpeggio kicks in", "sub bass swell", "electronic percussion building", "futuristic wonder"], "negative_local_styles": ["full drop"], "duration_ms": 7000, "lines": []},
+    {"section_name": "Architecture", "positive_local_styles": ["driving 120 BPM electronic beat", "tight punchy drums", "plucky synth sequences", "confident and inventive", "forward motion"], "negative_local_styles": ["slow", "ambient"], "duration_ms": 11000, "lines": []},
+    {"section_name": "Voices", "positive_local_styles": ["layered polyrhythmic synth plucks", "glitchy synth chops", "intricate counter melodies", "energy rising", "playful yet cinematic"], "negative_local_styles": ["vocals", "silence"], "duration_ms": 14000, "lines": []},
+    {"section_name": "Gates", "positive_local_styles": ["half-time heavy beat", "deep bass hit on every beat", "precise mechanical percussion", "focused tension"], "negative_local_styles": ["happy", "ambient"], "duration_ms": 9000, "lines": []},
+    {"section_name": "Parallel Sprint", "positive_local_styles": ["fast double-time drums", "racing arpeggios", "rising riser", "maximum momentum"], "negative_local_styles": ["slow", "quiet"], "duration_ms": 7000, "lines": []},
+    {"section_name": "Finale", "positive_local_styles": ["triumphant big hit", "wide synth chords", "cinematic drums", "clean resolve", "long reverb tail fading to silence"], "negative_local_styles": ["chaotic"], "duration_ms": 6000, "lines": []}
+  ]
+}

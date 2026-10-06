@@ -1,0 +1,44 @@
+{
+ "positive_global_styles": [
+  "explosive K-pop EDM drop",
+  "128 BPM",
+  "festival energy",
+  "high production value",
+  "instrumental"
+ ],
+ "negative_global_styles": [
+  "vocals",
+  "lyrics",
+  "singing",
+  "rap",
+  "lo-fi",
+  "acoustic guitar",
+  "comedy",
+  "intro",
+  "build-up",
+  "slow start",
+  "ambient",
+  "quiet"
+ ],
+ "sections": [
+  {
+   "section_name": "Drop",
+   "positive_local_styles": [
+    "full energy from the very first beat",
+    "punchy four-on-the-floor kick",
+    "massive distorted synth bass",
+    "bright supersaw chords",
+    "stadium anthem",
+    "euphoric yet bittersweet minor key"
+   ],
+   "negative_local_styles": [
+    "intro",
+    "fade in",
+    "quiet",
+    "sparse"
+   ],
+   "duration_ms": 13000,
+   "lines": []
+  }
+ ]
+}

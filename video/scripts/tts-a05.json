@@ -1,0 +1,11 @@
+{
+  "voice": "ibCGc01503OQd2R6i1n1",
+  "model": "eleven_v4",
+  "settings": {"stability": 0.5, "similarity_boost": 0.8, "use_speaker_boost": true},
+  "lines": [
+    {"id": "A05_r1", "text": "그 아이를, 다시… 무대에 세운다."},
+    {"id": "A05_r2", "text": "그 아이를 다시, 무대 위에 세운다."},
+    {"id": "A05_r3", "text": "그 아이를, 다시 무대에 세운다.", "settings": {"stability": 1.0}},
+    {"id": "A11_r1", "text": "아니면, 우리 자신인가."}
+  ]
+}

@@ -1,0 +1,156 @@
+{
+ "positive_global_styles": [
+  "cinematic trailer score",
+  "dark hybrid orchestral and synth",
+  "emotional",
+  "K-pop meets film score",
+  "high production value",
+  "instrumental"
+ ],
+ "negative_global_styles": [
+  "vocals",
+  "lyrics",
+  "singing",
+  "rap",
+  "lo-fi",
+  "acoustic guitar",
+  "comedy",
+  "country"
+ ],
+ "sections": [
+  {
+   "section_name": "Cold Open",
+   "positive_local_styles": [
+    "dark ambient drone",
+    "distant rain texture",
+    "sparse lonely felt piano notes in minor key",
+    "deep sub rumble",
+    "no drums",
+    "haunting stillness"
+   ],
+   "negative_local_styles": [
+    "drums",
+    "beat",
+    "bright synths"
+   ],
+   "duration_ms": 8000,
+   "lines": []
+  },
+  {
+   "section_name": "Data Awakening",
+   "positive_local_styles": [
+    "pulsing digital arpeggio synth",
+    "glitchy data textures",
+    "soft heartbeat kick",
+    "slowly rising strings",
+    "eerie and beautiful"
+   ],
+   "negative_local_styles": [
+    "full drums",
+    "drop"
+   ],
+   "duration_ms": 7000,
+   "lines": []
+  },
+  {
+   "section_name": "Decision Build",
+   "positive_local_styles": [
+    "huge cinematic riser",
+    "accelerating snare roll",
+    "string crescendo",
+    "tension peaking",
+    "abrupt cut right before the drop"
+   ],
+   "negative_local_styles": [
+    "calm",
+    "quiet"
+   ],
+   "duration_ms": 5000,
+   "lines": []
+  },
+  {
+   "section_name": "Debut Drop",
+   "positive_local_styles": [
+    "explosive K-pop trailer drop",
+    "128 BPM",
+    "punchy four-on-the-floor kick",
+    "massive synth bass",
+    "supersaw chords",
+    "stadium energy",
+    "euphoric yet bittersweet"
+   ],
+   "negative_local_styles": [
+    "slow",
+    "ambient",
+    "sparse"
+   ],
+   "duration_ms": 12000,
+   "lines": []
+  },
+  {
+   "section_name": "Silence Glitch",
+   "positive_local_styles": [
+    "sudden full stop",
+    "near silence",
+    "single reversed piano note",
+    "tiny digital glitch stutter"
+   ],
+   "negative_local_styles": [
+    "drums",
+    "bass",
+    "loud"
+   ],
+   "duration_ms": 3000,
+   "lines": []
+  },
+  {
+   "section_name": "Dark Turn",
+   "positive_local_styles": [
+    "dark suspense",
+    "deep brass braams",
+    "ticking clock percussion",
+    "distorted bass pulses",
+    "haunting minor piano motif",
+    "building dread"
+   ],
+   "negative_local_styles": [
+    "happy",
+    "bright",
+    "dance beat"
+   ],
+   "duration_ms": 12000,
+   "lines": []
+  },
+  {
+   "section_name": "Climax",
+   "positive_local_styles": [
+    "epic hybrid orchestral climax",
+    "pounding taiko drums",
+    "soaring full strings",
+    "wordless choir pad",
+    "massive impacts",
+    "emotional peak"
+   ],
+   "negative_local_styles": [
+    "quiet",
+    "minimal"
+   ],
+   "duration_ms": 8000,
+   "lines": []
+  },
+  {
+   "section_name": "Title",
+   "positive_local_styles": [
+    "one colossal final boom hit",
+    "long reverb tail",
+    "lone piano note echoing into silence"
+   ],
+   "negative_local_styles": [
+    "drums continuing",
+    "melody"
+   ],
+   "duration_ms": 5000,
+   "lines": []
+  }
+ ]
+}

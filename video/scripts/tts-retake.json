@@ -1,0 +1,18 @@
+{
+  "voice": "ibCGc01503OQd2R6i1n1",
+  "model": "eleven_v4",
+  "settings": {"stability": 0.5, "similarity_boost": 0.8, "use_speaker_boost": true},
+  "lines": [
+    {"id": "A08_t1", "text": "하지만 뉴가 배운 건, 노래만이 아니었다."},
+    {"id": "A08_t2", "text": "하지만, 뉴가 배운 건… 노래만이 아니었다."},
+    {"id": "A08_t3", "text": "하지만 뉴가 배운 건, 노래만이 아니었다.", "model": "eleven_multilingual_v2"},
+    {"id": "A12_t1", "text": "언리얼, 아이돌."},
+    {"id": "A12_t2", "text": "언리얼 아이돌.", "model": "eleven_multilingual_v2"},
+    {"id": "A12_t3", "text": "언 리얼, 아이돌."},
+    {"id": "B03_t1", "text": "세계관을 세우고,", "voice": "4JJwo477JUAx3HV0T7n7"},
+    {"id": "B03_t2", "text": "세계관을 세우고,", "voice": "4JJwo477JUAx3HV0T7n7"},
+    {"id": "B13_t1", "text": "프롬프트 하나가, 작가실이 됐다.", "voice": "4JJwo477JUAx3HV0T7n7"},
+    {"id": "B13_t2", "text": "프롬프트 하나가, 작가실이 되었다.", "voice": "4JJwo477JUAx3HV0T7n7"},
+    {"id": "B13_t3", "text": "프롬프트 하나가, 작가실이 되었다.", "voice": "4JJwo477JUAx3HV0T7n7", "model": "eleven_multilingual_v2"}
+  ]
+}

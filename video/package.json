@@ -1,0 +1,22 @@
+{
+  "name": "unreal-idol-video",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "studio": "remotion studio",
+    "render:promo": "remotion render Promo out/unreal-idol-teaser.mp4",
+    "render:harness": "remotion render Harness out/unreal-idol-harness.mp4"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.533",
+    "@remotion/media-utils": "^4.0.533",
+    "@remotion/noise": "^4.0.533",
+    "@remotion/paths": "^4.0.533",
+    "@remotion/shapes": "^4.0.533",
+    "@types/react": "^18.3.12",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "remotion": "^4.0.533",
+    "typescript": "^5.6.3"
+  }
+}

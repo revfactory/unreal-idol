@@ -1,0 +1,13 @@
+{
+  "voice": "ibCGc01503OQd2R6i1n1",
+  "model": "eleven_v4",
+  "settings": {"stability": 0.5, "similarity_boost": 0.8, "use_speaker_boost": true},
+  "lines": [
+    {"id": "T1", "text": "얼리얼 아이돌."},
+    {"id": "T2", "text": "언리얼… 아이돌."},
+    {"id": "T3", "text": "언리얼 아이돌.", "model": "eleven_v3"},
+    {"id": "T4", "text": "드라마, 언리얼 아이돌."},
+    {"id": "T5", "text": "Unreal Idol."},
+    {"id": "T6", "text": "언리얼 아이돌.", "settings": {"stability": 1.0}}
+  ]
+}
